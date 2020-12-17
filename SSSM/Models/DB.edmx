@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="SSSMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IDCliente" />
+          </Key>
+          <Property Name="IDCliente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Identidad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Encargo">
+          <Key>
+            <PropertyRef Name="IDEncargo" />
+          </Key>
+          <Property Name="IDEncargo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NombreCliente" Type="nvarchar(max)" />
+          <Property Name="NumeroDeTelefono" Type="nvarchar(max)" />
+          <Property Name="Valor" Type="float" />
+          <Property Name="Abono" Type="float" />
+          <Property Name="Encargado" Type="int" />
+          <Property Name="Observacion" Type="nvarchar(max)" />
+          <Property Name="TipoTrabajo" Type="int" />
+          <Property Name="Estado" Type="nvarchar(max)" />
+          <Property Name="FechaEntrada" Type="datetime2" Precision="7" />
+          <Property Name="FechaSalida" Type="datetime2" Precision="7" />
+        </EntityType>
+        <EntityType Name="TipoTrabajo">
+          <Key>
+            <PropertyRef Name="IDTipo" />
+          </Key>
+          <Property Name="IDTipo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descripcion" Type="nvarchar(max)" />
+          <Property Name="Precio" Type="float" />
+        </EntityType>
+        <EntityType Name="Trabajo">
+          <Key>
+            <PropertyRef Name="IDTrabajo" />
+          </Key>
+          <Property Name="IDTrabajo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TipoTrabajo" Type="int" />
+          <Property Name="Descripcion" Type="nvarchar(max)" />
+          <Property Name="Cliente" Type="int" />
+          <Property Name="Valor" Type="float" />
+          <Property Name="Link" Type="nvarchar(max)" />
+          <Property Name="FechaEntrada" Type="datetime2" Precision="7" />
+          <Property Name="FechaSalida" Type="datetime2" Precision="7" />
+          <Property Name="Usuario" Type="int" />
+          <Property Name="Estado" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar(max)" />
+          <Property Name="Usuario" Type="nvarchar" MaxLength="50" />
+          <Property Name="Clave" Type="nvarchar" MaxLength="50" />
+          <Property Name="TipoUsuario" Type="nvarchar" MaxLength="50" />
+          <Property Name="Estado" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="SSSMModelStoreContainer">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Encargo" EntityType="Self.Encargo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoTrabajo" EntityType="Self.TipoTrabajo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Trabajo" EntityType="Self.Trabajo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSSMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IDCliente" />
+          </Key>
+          <Property Name="IDCliente" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Identidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Encargo">
+          <Key>
+            <PropertyRef Name="IDEncargo" />
+          </Key>
+          <Property Name="IDEncargo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NombreCliente" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NumeroDeTelefono" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Valor" Type="Double" />
+          <Property Name="Abono" Type="Double" />
+          <Property Name="Encargado" Type="Int32" />
+          <Property Name="Observacion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="TipoTrabajo" Type="Int32" />
+          <Property Name="Estado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FechaEntrada" Type="DateTime" Precision="7" />
+          <Property Name="FechaSalida" Type="DateTime" Precision="7" />
+        </EntityType>
+        <EntityType Name="TipoTrabajo">
+          <Key>
+            <PropertyRef Name="IDTipo" />
+          </Key>
+          <Property Name="IDTipo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Precio" Type="Double" />
+        </EntityType>
+        <EntityType Name="Trabajo">
+          <Key>
+            <PropertyRef Name="IDTrabajo" />
+          </Key>
+          <Property Name="IDTrabajo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TipoTrabajo" Type="Int32" />
+          <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Cliente" Type="Int32" />
+          <Property Name="Valor" Type="Double" />
+          <Property Name="Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="FechaEntrada" Type="DateTime" Precision="7" />
+          <Property Name="FechaSalida" Type="DateTime" Precision="7" />
+          <Property Name="Usuario" Type="Int32" />
+          <Property Name="Estado" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Usuario">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Usuario1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Clave" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TipoUsuario" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="SSSMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cliente" EntityType="Self.Cliente" />
+          <EntitySet Name="Encargo" EntityType="Self.Encargo" />
+          <EntitySet Name="TipoTrabajo" EntityType="Self.TipoTrabajo" />
+          <EntitySet Name="Trabajo" EntityType="Self.Trabajo" />
+          <EntitySet Name="Usuario" EntityType="Self.Usuario" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SSSMModelStoreContainer" CdmEntityContainer="SSSMEntities">
+          <EntitySetMapping Name="Cliente">
+            <EntityTypeMapping TypeName="SSSMModel.Cliente">
+              <MappingFragment StoreEntitySet="Cliente">
+                <ScalarProperty Name="IDCliente" ColumnName="IDCliente" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Identidad" ColumnName="Identidad" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Encargo">
+            <EntityTypeMapping TypeName="SSSMModel.Encargo">
+              <MappingFragment StoreEntitySet="Encargo">
+                <ScalarProperty Name="IDEncargo" ColumnName="IDEncargo" />
+                <ScalarProperty Name="NombreCliente" ColumnName="NombreCliente" />
+                <ScalarProperty Name="NumeroDeTelefono" ColumnName="NumeroDeTelefono" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Abono" ColumnName="Abono" />
+                <ScalarProperty Name="Encargado" ColumnName="Encargado" />
+                <ScalarProperty Name="Observacion" ColumnName="Observacion" />
+                <ScalarProperty Name="TipoTrabajo" ColumnName="TipoTrabajo" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+                <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoTrabajo">
+            <EntityTypeMapping TypeName="SSSMModel.TipoTrabajo">
+              <MappingFragment StoreEntitySet="TipoTrabajo">
+                <ScalarProperty Name="IDTipo" ColumnName="IDTipo" />
+                <ScalarProperty Name="Descripcion1" ColumnName="Descripcion" />
+                <ScalarProperty Name="Precio" ColumnName="Precio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Trabajo">
+            <EntityTypeMapping TypeName="SSSMModel.Trabajo">
+              <MappingFragment StoreEntitySet="Trabajo">
+                <ScalarProperty Name="IDTrabajo" ColumnName="IDTrabajo" />
+                <ScalarProperty Name="TipoTrabajo" ColumnName="TipoTrabajo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Cliente" ColumnName="Cliente" />
+                <ScalarProperty Name="Valor" ColumnName="Valor" />
+                <ScalarProperty Name="Link" ColumnName="Link" />
+                <ScalarProperty Name="FechaEntrada" ColumnName="FechaEntrada" />
+                <ScalarProperty Name="FechaSalida" ColumnName="FechaSalida" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Usuario">
+            <EntityTypeMapping TypeName="SSSMModel.Usuario">
+              <MappingFragment StoreEntitySet="Usuario">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Usuario1" ColumnName="Usuario" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
