@@ -237,6 +237,7 @@ namespace SSSM
         {
             CrearPedido c = new CrearPedido();
             c.ShowDialog();
+            refrescarEncargos();
         }
 
         private void button16_Click(object sender, EventArgs e)

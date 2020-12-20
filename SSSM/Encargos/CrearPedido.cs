@@ -28,11 +28,25 @@ namespace SSSM
         {
             fechaL.Text = DateTime.Now.ToString("dd / MM / yyyy");
             horaL.Text = DateTime.Now.ToShortTimeString();
+            cargarCombox();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        void cargarCombox()
+        {
+            /*COMBOBOX START */
+            SSSMEntities atencion = new SSSMEntities();
+            List<TipoTrabajo> tipoT = (from TipoTrabajo in atencion.TipoTrabajo
+                                       select TipoTrabajo).OrderBy(c => c.Descripcion1).ToList();
+
+            atencionCmb.DataSource = tipoT;
+            atencionCmb.DisplayMember = "Descripcion1";
+            atencionCmb.ValueMember = "IDTipo";
+            /*COMBOBOX END */
         }
 
         private void button4_Click(object sender, EventArgs e)//GUARDAR
@@ -42,22 +56,16 @@ namespace SSSM
                 if (id == null)
                     oTabla = new Encargo();
 
-                //REFACTOR THIS---
-                //var lst = from a in db.Cliente
-                //          where a.Nombre == clientecmb.Text
-                //          select a;
-                //Cliente tabla = lst.FirstOrDefault<Cliente>();
-                //if (tabla != null)
-                //    idCliente = tabla.IDCliente;
-                //END---
-
-                oTabla.Descripcion = descripcion.Text;
-                oTabla.Valor = Convert.ToInt32(valor.Text);
+                //INSERT START
+                oTabla.Observacion = descripcion.Text;
+                oTabla.Valor = Convert.ToInt32(costo.Text);
+                oTabla.Abono = Convert.ToInt32(abono.Text);
                 oTabla.TipoTrabajo = idAtencion;
-                oTabla.Usuario = Properties.Settings.Default.UserID;
+                oTabla.Encargado = Properties.Settings.Default.UserID;
                 oTabla.Estado = "Activo";
-                oTabla.Cliente = idCliente;
-
+                oTabla.NombreCliente = cliente.Text;
+                oTabla.NumeroDeTelefono = telefono.Text;
+                //INSERT END
                 if (id == null)
                 {
                     var date = db.Database.SqlQuery<DateTime>("select getDate()");
@@ -108,6 +116,22 @@ namespace SSSM
         private void finalizarBtn_Click(object sender, EventArgs e)//FINALIZAR
         {
 
+        }
+
+        private void atencionCmb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            using (SSSMEntities db = new SSSMEntities())
+            {
+                var lst = from a in db.TipoTrabajo
+                          where a.Descripcion1 == atencionCmb.Text
+                          select a;
+                TipoTrabajo tabla = lst.FirstOrDefault<TipoTrabajo>();
+                if (tabla != null)
+                {
+                    idAtencion = tabla.IDTipo;
+                }
+
+            }
         }
     }
 }
