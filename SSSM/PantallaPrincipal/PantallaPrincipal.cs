@@ -38,6 +38,20 @@ namespace SSSM
 
         }
 
+        private int? GetIdEncargo()
+        {
+            try
+            {
+                return int.Parse(gridEncargos.Rows[gridEncargos.CurrentRow.Index].Cells[2].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             Clientes cli = new Clientes();
@@ -279,6 +293,40 @@ namespace SSSM
             }
 
             refrescar();
+        }
+
+        private void gridEncargos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == gridEncargos.Columns[0].Index)//EDITAR
+            {
+                int? id = GetIdEncargo();
+                if (id != null)
+                {
+                    CrearPedido oFrmTabla = new CrearPedido(id);
+                    oFrmTabla.tipox = gridEncargos.CurrentRow.Cells[3].Value.ToString();//TODO FIX THIS --WORKS
+                    //oFrmTabla.clientex = gridEncargos.CurrentRow.Cells[6].Value.ToString();
+                    oFrmTabla.finalizarBtn.Visible = true;
+                    //MessageBox.Show(oFrmTabla.clientex + " "+ oFrmTabla.tipox); ***FOR TESTING
+                    oFrmTabla.ShowDialog();
+                    refrescar();
+                }
+            }
+            if (e.ColumnIndex == gridEncargos.Columns[1].Index)//ELIMINAR
+            {
+                int? id = GetIdEncargo();
+                DialogResult dialogResult = MessageBox.Show("Desea borrar " + id.ToString(), "Advertencia", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SSSMEntities db = new SSSMEntities())
+                    {
+                        Encargo oTabla = db.Encargo.Find(id);
+                        db.Encargo.Remove(oTabla);
+                        db.SaveChanges();
+                    }
+                }
+            }
+
+            refrescarEncargos();
         }
     }
 }

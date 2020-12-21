@@ -17,23 +17,42 @@ namespace SSSM
         public string tipox;
         public int? id;
         Encargo oTabla = null;
-        public CrearPedido()
+        public CrearPedido(int? id = null)
         {
             InitializeComponent();
+            this.id = id;
         }
 
-        public int counter;
-        public int diasV;
+
         private void vacaciones_Load(object sender, EventArgs e)
         {
             fechaL.Text = DateTime.Now.ToString("dd / MM / yyyy");
             horaL.Text = DateTime.Now.ToShortTimeString();
             cargarCombox();
+            if (id != null)
+            {
+                cargaDatos();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cargaDatos()
+        {
+            cargarCombox();
+            using (SSSMEntities db = new SSSMEntities())
+            {
+                oTabla = db.Encargo.Find(id);
+                descripcion.Text = oTabla.Observacion;
+                costo.Text = oTabla.Valor.ToString();
+                abono.Text = oTabla.Abono.ToString();
+                atencionCmb.Text = tipox; //WORKING
+                cliente.Text = oTabla.NombreCliente;
+                telefono.Text = oTabla.NumeroDeTelefono.ToString();
+            }
         }
 
         void cargarCombox()
