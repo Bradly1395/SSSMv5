@@ -85,9 +85,8 @@
             this.panel1.Controls.Add(this.btnClientes);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(279, 777);
+            this.panel1.Size = new System.Drawing.Size(209, 631);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -98,10 +97,9 @@
             this.buttonDB.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDB.ForeColor = System.Drawing.Color.White;
             this.buttonDB.Image = ((System.Drawing.Image)(resources.GetObject("buttonDB.Image")));
-            this.buttonDB.Location = new System.Drawing.Point(4, 730);
-            this.buttonDB.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.buttonDB.Location = new System.Drawing.Point(3, 593);
             this.buttonDB.Name = "buttonDB";
-            this.buttonDB.Size = new System.Drawing.Size(43, 43);
+            this.buttonDB.Size = new System.Drawing.Size(32, 35);
             this.buttonDB.TabIndex = 9;
             this.buttonDB.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonDB.UseVisualStyleBackColor = true;
@@ -117,10 +115,9 @@
             this.btnParam.ForeColor = System.Drawing.Color.White;
             this.btnParam.Image = ((System.Drawing.Image)(resources.GetObject("btnParam.Image")));
             this.btnParam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnParam.Location = new System.Drawing.Point(16, 624);
-            this.btnParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnParam.Location = new System.Drawing.Point(12, 507);
             this.btnParam.Name = "btnParam";
-            this.btnParam.Size = new System.Drawing.Size(263, 70);
+            this.btnParam.Size = new System.Drawing.Size(197, 57);
             this.btnParam.TabIndex = 4;
             this.btnParam.Text = "       Parametros";
             this.btnParam.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -137,10 +134,9 @@
             this.btnUsers.ForeColor = System.Drawing.Color.White;
             this.btnUsers.Image = ((System.Drawing.Image)(resources.GetObject("btnUsers.Image")));
             this.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsers.Location = new System.Drawing.Point(16, 558);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUsers.Location = new System.Drawing.Point(12, 453);
             this.btnUsers.Name = "btnUsers";
-            this.btnUsers.Size = new System.Drawing.Size(263, 70);
+            this.btnUsers.Size = new System.Drawing.Size(197, 57);
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "       Usuarios";
             this.btnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -156,10 +152,9 @@
             this.btnClientes.ForeColor = System.Drawing.Color.White;
             this.btnClientes.Image = ((System.Drawing.Image)(resources.GetObject("btnClientes.Image")));
             this.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClientes.Location = new System.Drawing.Point(16, 73);
-            this.btnClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClientes.Location = new System.Drawing.Point(12, 59);
             this.btnClientes.Name = "btnClientes";
-            this.btnClientes.Size = new System.Drawing.Size(263, 66);
+            this.btnClientes.Size = new System.Drawing.Size(197, 54);
             this.btnClientes.TabIndex = 4;
             this.btnClientes.Text = "       Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -170,29 +165,27 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(279, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Location = new System.Drawing.Point(209, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1306, 12);
+            this.panel2.Size = new System.Drawing.Size(979, 10);
             this.panel2.TabIndex = 1;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(39)))), ((int)(((byte)(40)))));
             this.panel3.Controls.Add(this.pictureBox2);
-            this.panel3.Location = new System.Drawing.Point(324, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Location = new System.Drawing.Point(243, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(192, 142);
+            this.panel3.Size = new System.Drawing.Size(144, 115);
             this.panel3.TabIndex = 2;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(0, 21);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 17);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(192, 94);
+            this.pictureBox2.Size = new System.Drawing.Size(144, 76);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 156;
             this.pictureBox2.TabStop = false;
@@ -205,10 +198,9 @@
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
             this.button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button13.Location = new System.Drawing.Point(1533, 20);
-            this.button13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button13.Location = new System.Drawing.Point(1150, 16);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(43, 43);
+            this.button13.Size = new System.Drawing.Size(32, 35);
             this.button13.TabIndex = 4;
             this.button13.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button13.UseVisualStyleBackColor = true;
@@ -222,10 +214,9 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1483, 20);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(1112, 16);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(43, 43);
+            this.button4.Size = new System.Drawing.Size(32, 35);
             this.button4.TabIndex = 8;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;
@@ -258,8 +249,7 @@
             this.gridAdmin.EnableHeadersVisualStyles = false;
             this.gridAdmin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.gridAdmin.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.gridAdmin.Location = new System.Drawing.Point(524, 20);
-            this.gridAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridAdmin.Location = new System.Drawing.Point(393, 16);
             this.gridAdmin.Name = "gridAdmin";
             this.gridAdmin.ReadOnly = true;
             this.gridAdmin.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -275,7 +265,7 @@
             this.gridAdmin.RowHeadersWidth = 51;
             this.gridAdmin.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.gridAdmin.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridAdmin.Size = new System.Drawing.Size(13, 12);
+            this.gridAdmin.Size = new System.Drawing.Size(10, 10);
             this.gridAdmin.TabIndex = 12;
             this.gridAdmin.Visible = false;
             // 
@@ -288,10 +278,9 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(1313, 75);
-            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(985, 61);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(263, 66);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(197, 54);
             this.btnCerrarSesion.TabIndex = 13;
             this.btnCerrarSesion.Text = " Cerrar Sesión";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -304,10 +293,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
             this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(953, 36);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(715, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 29);
+            this.label1.Size = new System.Drawing.Size(150, 23);
             this.label1.TabIndex = 24;
             this.label1.Text = "Agregar Encargo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -318,10 +306,9 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
             this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label5.Location = new System.Drawing.Point(953, 36);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(715, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(184, 29);
+            this.label5.Size = new System.Drawing.Size(142, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "Agregar Trabajo";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -332,10 +319,9 @@
             this.button12.Enabled = false;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
-            this.button12.Location = new System.Drawing.Point(945, 22);
-            this.button12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button12.Location = new System.Drawing.Point(709, 18);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(300, 62);
+            this.button12.Size = new System.Drawing.Size(225, 50);
             this.button12.TabIndex = 20;
             this.button12.UseVisualStyleBackColor = false;
             // 
@@ -345,10 +331,9 @@
             this.btnAdEncargo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdEncargo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(158)))), ((int)(((byte)(181)))));
             this.btnAdEncargo.Image = ((System.Drawing.Image)(resources.GetObject("btnAdEncargo.Image")));
-            this.btnAdEncargo.Location = new System.Drawing.Point(879, 22);
-            this.btnAdEncargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdEncargo.Location = new System.Drawing.Point(659, 18);
             this.btnAdEncargo.Name = "btnAdEncargo";
-            this.btnAdEncargo.Size = new System.Drawing.Size(67, 62);
+            this.btnAdEncargo.Size = new System.Drawing.Size(50, 50);
             this.btnAdEncargo.TabIndex = 19;
             this.btnAdEncargo.UseVisualStyleBackColor = false;
             this.btnAdEncargo.Click += new System.EventHandler(this.button14_Click);
@@ -359,10 +344,9 @@
             this.button15.Enabled = false;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
-            this.button15.Location = new System.Drawing.Point(945, 22);
-            this.button15.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button15.Location = new System.Drawing.Point(709, 18);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(300, 62);
+            this.button15.Size = new System.Drawing.Size(225, 50);
             this.button15.TabIndex = 18;
             this.button15.UseVisualStyleBackColor = false;
             // 
@@ -372,10 +356,9 @@
             this.btnAdTrabajo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdTrabajo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(201)))), ((int)(((byte)(20)))), ((int)(((byte)(84)))));
             this.btnAdTrabajo.Image = ((System.Drawing.Image)(resources.GetObject("btnAdTrabajo.Image")));
-            this.btnAdTrabajo.Location = new System.Drawing.Point(879, 22);
-            this.btnAdTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdTrabajo.Location = new System.Drawing.Point(659, 18);
             this.btnAdTrabajo.Name = "btnAdTrabajo";
-            this.btnAdTrabajo.Size = new System.Drawing.Size(67, 62);
+            this.btnAdTrabajo.Size = new System.Drawing.Size(50, 50);
             this.btnAdTrabajo.TabIndex = 17;
             this.btnAdTrabajo.UseVisualStyleBackColor = false;
             this.btnAdTrabajo.Click += new System.EventHandler(this.button16_Click);
@@ -384,11 +367,10 @@
             // 
             this.TabControlTE.Controls.Add(this.TabPageTrabajos);
             this.TabControlTE.Controls.Add(this.TabPageEncargo);
-            this.TabControlTE.Location = new System.Drawing.Point(316, 166);
-            this.TabControlTE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TabControlTE.Location = new System.Drawing.Point(237, 135);
             this.TabControlTE.Name = "TabControlTE";
             this.TabControlTE.SelectedIndex = 1;
-            this.TabControlTE.Size = new System.Drawing.Size(1260, 610);
+            this.TabControlTE.Size = new System.Drawing.Size(945, 496);
             this.TabControlTE.TabIndex = 30;
             this.TabControlTE.UseSelectable = true;
             // 
@@ -401,16 +383,15 @@
             this.TabPageTrabajos.Controls.Add(this.btnAdTrabajo);
             this.TabPageTrabajos.HorizontalScrollbarBarColor = true;
             this.TabPageTrabajos.HorizontalScrollbarHighlightOnWheel = false;
-            this.TabPageTrabajos.HorizontalScrollbarSize = 12;
+            this.TabPageTrabajos.HorizontalScrollbarSize = 10;
             this.TabPageTrabajos.Location = new System.Drawing.Point(4, 38);
-            this.TabPageTrabajos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TabPageTrabajos.Name = "TabPageTrabajos";
-            this.TabPageTrabajos.Size = new System.Drawing.Size(1252, 568);
+            this.TabPageTrabajos.Size = new System.Drawing.Size(937, 454);
             this.TabPageTrabajos.TabIndex = 0;
             this.TabPageTrabajos.Text = "Trabajos";
             this.TabPageTrabajos.VerticalScrollbarBarColor = true;
             this.TabPageTrabajos.VerticalScrollbarHighlightOnWheel = false;
-            this.TabPageTrabajos.VerticalScrollbarSize = 13;
+            this.TabPageTrabajos.VerticalScrollbarSize = 10;
             // 
             // gridTrabajos
             // 
@@ -428,15 +409,15 @@
             this.ELIMINAR});
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(8);
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridTrabajos.DefaultCellStyle = dataGridViewCellStyle4;
-            this.gridTrabajos.Location = new System.Drawing.Point(5, 101);
-            this.gridTrabajos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridTrabajos.Location = new System.Drawing.Point(4, 82);
+            this.gridTrabajos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridTrabajos.MultiSelect = false;
             this.gridTrabajos.Name = "gridTrabajos";
             this.gridTrabajos.ReadOnly = true;
@@ -444,7 +425,7 @@
             this.gridTrabajos.RowHeadersVisible = false;
             this.gridTrabajos.RowHeadersWidth = 51;
             this.gridTrabajos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridTrabajos.Size = new System.Drawing.Size(1239, 447);
+            this.gridTrabajos.Size = new System.Drawing.Size(929, 363);
             this.gridTrabajos.TabIndex = 31;
             this.gridTrabajos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridTrabajos_CellContentClick);
             // 
@@ -474,10 +455,9 @@
             this.btnRfrTrabajo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRfrTrabajo.ForeColor = System.Drawing.Color.White;
             this.btnRfrTrabajo.Image = ((System.Drawing.Image)(resources.GetObject("btnRfrTrabajo.Image")));
-            this.btnRfrTrabajo.Location = new System.Drawing.Point(5, 31);
-            this.btnRfrTrabajo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRfrTrabajo.Location = new System.Drawing.Point(4, 25);
             this.btnRfrTrabajo.Name = "btnRfrTrabajo";
-            this.btnRfrTrabajo.Size = new System.Drawing.Size(43, 43);
+            this.btnRfrTrabajo.Size = new System.Drawing.Size(32, 35);
             this.btnRfrTrabajo.TabIndex = 32;
             this.btnRfrTrabajo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRfrTrabajo.UseVisualStyleBackColor = false;
@@ -491,16 +471,15 @@
             this.TabPageEncargo.Controls.Add(this.button12);
             this.TabPageEncargo.HorizontalScrollbarBarColor = true;
             this.TabPageEncargo.HorizontalScrollbarHighlightOnWheel = false;
-            this.TabPageEncargo.HorizontalScrollbarSize = 12;
+            this.TabPageEncargo.HorizontalScrollbarSize = 10;
             this.TabPageEncargo.Location = new System.Drawing.Point(4, 38);
-            this.TabPageEncargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TabPageEncargo.Name = "TabPageEncargo";
-            this.TabPageEncargo.Size = new System.Drawing.Size(1252, 568);
+            this.TabPageEncargo.Size = new System.Drawing.Size(937, 454);
             this.TabPageEncargo.TabIndex = 1;
             this.TabPageEncargo.Text = "Encargos";
             this.TabPageEncargo.VerticalScrollbarBarColor = true;
             this.TabPageEncargo.VerticalScrollbarHighlightOnWheel = false;
-            this.TabPageEncargo.VerticalScrollbarSize = 13;
+            this.TabPageEncargo.VerticalScrollbarSize = 10;
             // 
             // gridEncargos
             // 
@@ -518,15 +497,15 @@
             this.dataGridViewImageColumn2});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(8);
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridEncargos.DefaultCellStyle = dataGridViewCellStyle5;
-            this.gridEncargos.Location = new System.Drawing.Point(5, 101);
-            this.gridEncargos.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.gridEncargos.Location = new System.Drawing.Point(4, 82);
+            this.gridEncargos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridEncargos.MultiSelect = false;
             this.gridEncargos.Name = "gridEncargos";
             this.gridEncargos.ReadOnly = true;
@@ -534,7 +513,7 @@
             this.gridEncargos.RowHeadersVisible = false;
             this.gridEncargos.RowHeadersWidth = 51;
             this.gridEncargos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridEncargos.Size = new System.Drawing.Size(1239, 449);
+            this.gridEncargos.Size = new System.Drawing.Size(929, 365);
             this.gridEncargos.TabIndex = 161;
             this.gridEncargos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridEncargos_CellContentClick);
             // 
@@ -564,10 +543,9 @@
             this.btnRfrEncargo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRfrEncargo.ForeColor = System.Drawing.Color.White;
             this.btnRfrEncargo.Image = ((System.Drawing.Image)(resources.GetObject("btnRfrEncargo.Image")));
-            this.btnRfrEncargo.Location = new System.Drawing.Point(5, 31);
-            this.btnRfrEncargo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnRfrEncargo.Location = new System.Drawing.Point(4, 25);
             this.btnRfrEncargo.Name = "btnRfrEncargo";
-            this.btnRfrEncargo.Size = new System.Drawing.Size(43, 43);
+            this.btnRfrEncargo.Size = new System.Drawing.Size(32, 35);
             this.btnRfrEncargo.TabIndex = 31;
             this.btnRfrEncargo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnRfrEncargo.UseVisualStyleBackColor = false;
@@ -578,10 +556,9 @@
             this.bienvenido.BackColor = System.Drawing.SystemColors.Control;
             this.bienvenido.Font = new System.Drawing.Font("Bahnschrift Light", 22F);
             this.bienvenido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.bienvenido.Location = new System.Drawing.Point(525, 70);
-            this.bienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.bienvenido.Location = new System.Drawing.Point(394, 57);
             this.bienvenido.Name = "bienvenido";
-            this.bienvenido.Size = new System.Drawing.Size(575, 45);
+            this.bienvenido.Size = new System.Drawing.Size(463, 36);
             this.bienvenido.TabIndex = 24;
             this.bienvenido.Text = "BIENVENIDO(A) JOSUE AGUILERA";
             // 
@@ -592,10 +569,9 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(1432, 21);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Location = new System.Drawing.Point(1074, 17);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(43, 43);
+            this.button6.Size = new System.Drawing.Size(32, 35);
             this.button6.TabIndex = 11;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -603,11 +579,11 @@
             // 
             // PantallaPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1585, 777);
+            this.ClientSize = new System.Drawing.Size(1188, 631);
             this.ControlBox = false;
             this.Controls.Add(this.button6);
             this.Controls.Add(this.bienvenido);
@@ -620,7 +596,6 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PantallaPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SSSM";
