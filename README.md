@@ -1,3 +1,8 @@
-HR_HGSF
-
-Human Resources Vacation Scheduler
+SSSM v5
+Missing Features
+- ENCARGOS
+- USUARIOS
+- PARAMETROS
+- VALIDACIONES
+- PAGINACION GRID
+- SQL TRIGGERS

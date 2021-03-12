@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FirstCustomControl));
-            this.radCalendar1 = new Telerik.WinControls.UI.RadCalendar();
-            this.fluentTheme1 = new Telerik.WinControls.Themes.FluentTheme();
-            this.docCmb = new MetroFramework.Controls.MetroComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -50,18 +47,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.conveniosTXT = new System.Windows.Forms.Label();
             this.button9 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.radCalendar1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // radCalendar1
-            // 
-            this.radCalendar1.HeaderHeight = 28;
-            this.radCalendar1.HeaderWidth = 28;
-            this.radCalendar1.Location = new System.Drawing.Point(383, 146);
-            this.radCalendar1.Name = "radCalendar1";
-            this.radCalendar1.Size = new System.Drawing.Size(566, 336);
-            this.radCalendar1.TabIndex = 1;
-            this.radCalendar1.ThemeName = "Fluent";
             // 
             // docCmb
             // 
@@ -328,11 +313,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.docCmb);
-            this.Controls.Add(this.radCalendar1);
+
             this.Name = "FirstCustomControl";
             this.Size = new System.Drawing.Size(970, 485);
             this.Load += new System.EventHandler(this.FirstCustomControl_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.radCalendar1)).EndInit();
+
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -340,8 +325,6 @@
 
         #endregion
 
-        private Telerik.WinControls.UI.RadCalendar radCalendar1;
-        private Telerik.WinControls.Themes.FluentTheme fluentTheme1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
