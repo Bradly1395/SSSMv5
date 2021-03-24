@@ -134,7 +134,31 @@ namespace SSSM
 
         private void finalizarBtn_Click(object sender, EventArgs e)//FINALIZAR
         {
+            DialogResult dialogResult = MessageBox.Show("Desea finalizar el trabajo? ", "Advertencia", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                using (SSSMEntities db = new SSSMEntities())
+                {
+                    //INSERT START
+                    oTabla.Observacion = descripcion.Text;
+                    oTabla.Valor = Convert.ToInt32(costo.Text);
+                    oTabla.Abono = Convert.ToInt32(abono.Text);
+                    oTabla.TipoTrabajo = idAtencion;
+                    oTabla.Encargado = Properties.Settings.Default.UserID;
+                    oTabla.Estado = "Entregado";
+                    oTabla.NombreCliente = cliente.Text;
+                    oTabla.NumeroDeTelefono = telefono.Text;
+                    //INSERT END
 
+                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                    oTabla.FechaSalida = date.AsEnumerable().First();
+                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+
+                    db.SaveChanges();
+
+                    this.Close();
+                }
+            }
         }
 
         private void atencionCmb_SelectedIndexChanged(object sender, EventArgs e)

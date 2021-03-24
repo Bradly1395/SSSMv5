@@ -1,6 +1,6 @@
 SSSM v5
 Missing Features
-- ENCARGOS
+- ENCARGOS .... Done.
 - USUARIOS
 - PARAMETROS
 - VALIDACIONES

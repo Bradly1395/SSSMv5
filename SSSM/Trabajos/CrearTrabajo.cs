@@ -143,7 +143,8 @@ namespace SSSM
                     
             }
 
-            this.valor.Text = costo;
+            if (id is null)
+                this.valor.Text = costo;
 
         }
 
