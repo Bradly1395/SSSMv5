@@ -31,11 +31,20 @@ namespace SSSM
             {
                 var lst = from d in db.Cliente
                           select d;
-                gridClientes.DataSource = lst.ToList();
+                gridClientesX.DataSource = lst.ToList();
             }
+            gridClientesX.Columns[0].DisplayIndex = 5;
+            gridClientesX.Columns[1].DisplayIndex = 5;
+
+            gridClientesX.Columns[0].Width = 65; //EDITAR
+            gridClientesX.Columns[1].Width = 75; //ELIMINAR
+            gridClientesX.Columns[2].Width = 70; //IDCliente
+            gridClientesX.Columns[3].Width = 275; //Nombre
+            gridClientesX.Columns[4].Width = 120; //Identidad
+            gridClientesX.Columns[5].Width = 120; //Telefono
         }
 
-            private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
@@ -86,7 +95,7 @@ namespace SSSM
         {
             try
             {
-                return int.Parse(gridClientes.Rows[gridClientes.CurrentRow.Index].Cells[0].Value.ToString());
+                return int.Parse(gridClientesX.Rows[gridClientesX.CurrentRow.Index].Cells[2].Value.ToString());
             }
             catch (Exception)
             {
@@ -105,6 +114,35 @@ namespace SSSM
                 oFrmTabla.ShowDialog();
                 refrescar();
             }
+        }
+
+        private void gridClientesX_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == gridClientesX.Columns[0].Index)//EDITAR
+            {
+                int? id = GetId();
+                if (id != null)
+                {
+                    AgregarCliente oFrmTabla = new AgregarCliente(id);
+                    oFrmTabla.ShowDialog();
+                    refrescar();
+                }
+            }
+            if (e.ColumnIndex == gridClientesX.Columns[1].Index)//ELIMINAR
+            {
+                int? id = GetId();
+                DialogResult dialogResult = MessageBox.Show("Desea borrar " + id.ToString(), "Advertencia", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SSSMEntities db = new SSSMEntities())
+                    {
+                        Cliente oTabla = db.Cliente.Find(id);
+                        db.Cliente.Remove(oTabla);
+                        db.SaveChanges();
+                    }
+                }
+            }
+            refrescar();
         }
     }
 }
