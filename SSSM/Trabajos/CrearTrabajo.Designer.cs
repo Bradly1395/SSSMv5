@@ -142,6 +142,7 @@
             this.valor.Name = "valor";
             this.valor.Size = new System.Drawing.Size(257, 33);
             this.valor.TabIndex = 14;
+            this.valor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valor_KeyPress);
             // 
             // label6
             // 

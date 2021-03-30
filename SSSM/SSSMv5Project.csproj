@@ -229,6 +229,7 @@
     <Compile Include="Encargos\CrearPedido.Designer.cs">
       <DependentUpon>CrearPedido.cs</DependentUpon>
     </Compile>
+    <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="Clientes\AgregarCliente.resx">
       <DependentUpon>AgregarCliente.cs</DependentUpon>
     </EmbeddedResource>

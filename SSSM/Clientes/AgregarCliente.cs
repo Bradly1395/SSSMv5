@@ -76,5 +76,17 @@ namespace SSSM
 
             }
         }
+
+        private void identidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
+
+        private void telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
     }
 }

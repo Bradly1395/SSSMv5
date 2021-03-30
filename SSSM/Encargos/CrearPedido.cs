@@ -176,5 +176,23 @@ namespace SSSM
 
             }
         }
+
+        private void telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
+
+        private void costo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
+
+        private void abono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
     }
 }

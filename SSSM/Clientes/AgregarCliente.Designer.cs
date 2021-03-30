@@ -114,6 +114,7 @@
             this.identidad.Name = "identidad";
             this.identidad.Size = new System.Drawing.Size(230, 33);
             this.identidad.TabIndex = 25;
+            this.identidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.identidad_KeyPress);
             // 
             // telefono
             // 
@@ -123,6 +124,7 @@
             this.telefono.Name = "telefono";
             this.telefono.Size = new System.Drawing.Size(230, 33);
             this.telefono.TabIndex = 26;
+            this.telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefono_KeyPress);
             // 
             // AgregarCliente
             // 

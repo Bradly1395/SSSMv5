@@ -67,6 +67,7 @@
             this.editarbtn.TabIndex = 21;
             this.editarbtn.Text = "EDITAR";
             this.editarbtn.UseVisualStyleBackColor = false;
+            this.editarbtn.Visible = false;
             this.editarbtn.Click += new System.EventHandler(this.editarbtn_Click);
             // 
             // pictureBox2

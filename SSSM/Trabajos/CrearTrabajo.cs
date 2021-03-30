@@ -188,5 +188,11 @@ namespace SSSM
             atencionCmb.Text = tipox; //FIX ME
             clientecmb.Text = clientex; // FIX ME
         }
+
+        private void valor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
     }
 }

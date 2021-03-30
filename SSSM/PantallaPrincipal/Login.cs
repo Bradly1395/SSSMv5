@@ -107,7 +107,7 @@ namespace SSSM
                 }
                 else
                 {
-                    MessageBox.Show("Usuario no existe");
+                    MessageBox.Show("Usuario o contraseña incorrecto");
                 }
 
             }
