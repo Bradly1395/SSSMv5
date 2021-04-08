@@ -183,7 +183,7 @@
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 17);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(144, 76);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -278,9 +278,9 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.White;
             this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(985, 61);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(1074, 61);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Size = new System.Drawing.Size(197, 54);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(108, 54);
             this.btnCerrarSesion.TabIndex = 13;
             this.btnCerrarSesion.Text = " Cerrar Sesión";
             this.btnCerrarSesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -295,7 +295,7 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(715, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 23);
+            this.label1.Size = new System.Drawing.Size(152, 23);
             this.label1.TabIndex = 24;
             this.label1.Text = "Agregar Encargo";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -308,7 +308,7 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label5.Location = new System.Drawing.Point(715, 29);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(142, 23);
+            this.label5.Size = new System.Drawing.Size(144, 23);
             this.label5.TabIndex = 23;
             this.label5.Text = "Agregar Trabajo";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -417,7 +417,7 @@
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridTrabajos.DefaultCellStyle = dataGridViewCellStyle4;
             this.gridTrabajos.Location = new System.Drawing.Point(4, 82);
-            this.gridTrabajos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridTrabajos.Margin = new System.Windows.Forms.Padding(4);
             this.gridTrabajos.MultiSelect = false;
             this.gridTrabajos.Name = "gridTrabajos";
             this.gridTrabajos.ReadOnly = true;
@@ -505,7 +505,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridEncargos.DefaultCellStyle = dataGridViewCellStyle5;
             this.gridEncargos.Location = new System.Drawing.Point(4, 82);
-            this.gridEncargos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridEncargos.Margin = new System.Windows.Forms.Padding(4);
             this.gridEncargos.MultiSelect = false;
             this.gridEncargos.Name = "gridEncargos";
             this.gridEncargos.ReadOnly = true;
@@ -558,7 +558,7 @@
             this.bienvenido.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.bienvenido.Location = new System.Drawing.Point(394, 57);
             this.bienvenido.Name = "bienvenido";
-            this.bienvenido.Size = new System.Drawing.Size(463, 36);
+            this.bienvenido.Size = new System.Drawing.Size(465, 36);
             this.bienvenido.TabIndex = 24;
             this.bienvenido.Text = "BIENVENIDO(A) JOSUE AGUILERA";
             // 
@@ -575,6 +575,7 @@
             this.button6.TabIndex = 11;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
             // PantallaPrincipal

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.agregaruserbtn = new System.Windows.Forms.Button();
             this.editarbtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -47,10 +47,9 @@
             this.agregaruserbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregaruserbtn.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
             this.agregaruserbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.agregaruserbtn.Location = new System.Drawing.Point(821, 122);
-            this.agregaruserbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.agregaruserbtn.Location = new System.Drawing.Point(519, 91);
             this.agregaruserbtn.Name = "agregaruserbtn";
-            this.agregaruserbtn.Size = new System.Drawing.Size(212, 62);
+            this.agregaruserbtn.Size = new System.Drawing.Size(159, 58);
             this.agregaruserbtn.TabIndex = 20;
             this.agregaruserbtn.Text = "NUEVO USUARIO";
             this.agregaruserbtn.UseVisualStyleBackColor = false;
@@ -62,10 +61,9 @@
             this.editarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarbtn.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
             this.editarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.editarbtn.Location = new System.Drawing.Point(587, 122);
-            this.editarbtn.Margin = new System.Windows.Forms.Padding(4);
+            this.editarbtn.Location = new System.Drawing.Point(354, 91);
             this.editarbtn.Name = "editarbtn";
-            this.editarbtn.Size = new System.Drawing.Size(212, 62);
+            this.editarbtn.Size = new System.Drawing.Size(159, 58);
             this.editarbtn.TabIndex = 21;
             this.editarbtn.Text = "EDITAR";
             this.editarbtn.UseVisualStyleBackColor = false;
@@ -74,10 +72,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 22);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 146);
+            this.pictureBox2.Size = new System.Drawing.Size(117, 119);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 158;
             this.pictureBox2.TabStop = false;
@@ -89,10 +87,9 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(975, 22);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(634, 18);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(59, 50);
+            this.button6.Size = new System.Drawing.Size(44, 41);
             this.button6.TabIndex = 159;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -112,17 +109,17 @@
             this.gridUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.EDITAR,
             this.ELIMINAR});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(8);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridUsuarios.Location = new System.Drawing.Point(19, 202);
-            this.gridUsuarios.Margin = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(8);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
+            this.gridUsuarios.Location = new System.Drawing.Point(14, 164);
+            this.gridUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridUsuarios.MultiSelect = false;
             this.gridUsuarios.Name = "gridUsuarios";
             this.gridUsuarios.ReadOnly = true;
@@ -130,7 +127,7 @@
             this.gridUsuarios.RowHeadersVisible = false;
             this.gridUsuarios.RowHeadersWidth = 51;
             this.gridUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUsuarios.Size = new System.Drawing.Size(1014, 386);
+            this.gridUsuarios.Size = new System.Drawing.Size(760, 314);
             this.gridUsuarios.TabIndex = 160;
             // 
             // EDITAR
@@ -153,18 +150,16 @@
             // 
             // Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 597);
+            this.ClientSize = new System.Drawing.Size(693, 485);
             this.ControlBox = false;
             this.Controls.Add(this.gridUsuarios);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.editarbtn);
             this.Controls.Add(this.agregaruserbtn);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Usuarios";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "USUARIOS";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form2_Load);

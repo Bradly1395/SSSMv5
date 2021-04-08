@@ -29,15 +29,27 @@ namespace SSSM
         {
             using (SSSMEntities db = new SSSMEntities())
             {
-                var lst = from d in db.Usuario
-                          select d;
+                var lst = (from d in db.Usuario
+                          select new
+                          {
+                              ID = d.ID,
+                              d.Nombre,
+                              Usuario = d.Usuario1,
+                              d.TipoUsuario,
+                              d.Estado
+                          }).ToList();
                 gridUsuarios.DataSource = lst.ToList();
             }
-            gridUsuarios.Columns[0].DisplayIndex = 7;
-            gridUsuarios.Columns[1].DisplayIndex = 7;
+            gridUsuarios.Columns[0].DisplayIndex = 6;
+            gridUsuarios.Columns[1].DisplayIndex = 6;
 
             gridUsuarios.Columns[0].Width = 65; //EDITAR
             gridUsuarios.Columns[1].Width = 75; //ELIMINAR
+            gridUsuarios.Columns[2].Width = 60; //ID
+            gridUsuarios.Columns[3].Width = 150; //NOMBRE
+            gridUsuarios.Columns[4].Width = 120; //USUARIO
+            gridUsuarios.Columns[6].Width = 70; //ESTADO
+
         }
 
         private void label1_Click(object sender, EventArgs e)
