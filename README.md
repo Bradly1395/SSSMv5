@@ -1,8 +1,8 @@
 SSSM v5
 Missing Features
-- ENCARGOS .... Done.
+- ENCARGOS .......... Done.
 - USUARIOS
 - PARAMETROS
 - VALIDACIONES
 - PAGINACION GRID
-- SQL TRIGGERS
+- LOGS .............. Done.

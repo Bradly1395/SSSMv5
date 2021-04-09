@@ -287,6 +287,17 @@ namespace SSSM
                     {
                         Trabajo oTabla = db.Trabajo.Find(id);
                         db.Trabajo.Remove(oTabla);
+
+                        //LOG START
+                        Logs oTabla2 = new Logs();
+                        oTabla2.Usuario = Properties.Settings.Default.UserName.ToString();
+                        oTabla2.Descripcion = "Eliminar Trabajo "+ oTabla.Descripcion+" "+oTabla.FechaEntrada.ToString();
+                        oTabla2.Elemento = "Trabajo";
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla2.Fecha = date.AsEnumerable().First();
+                        db.Logs.Add(oTabla2);
+                        //LOG END
+
                         db.SaveChanges();
                     }
                 }
@@ -321,6 +332,17 @@ namespace SSSM
                     {
                         Encargo oTabla = db.Encargo.Find(id);
                         db.Encargo.Remove(oTabla);
+
+                        //LOG START
+                        Logs oTabla2 = new Logs();
+                        oTabla2.Usuario = Properties.Settings.Default.UserName.ToString();
+                        oTabla2.Descripcion = "Eliminar Encargo " + oTabla.Observacion + " " + oTabla.FechaEntrada.ToString();
+                        oTabla2.Elemento = "Encargo";
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla2.Fecha = date.AsEnumerable().First();
+                        db.Logs.Add(oTabla2);
+                        //LOG END
+
                         db.SaveChanges();
                     }
                 }

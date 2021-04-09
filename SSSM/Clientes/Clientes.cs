@@ -138,6 +138,17 @@ namespace SSSM
                     {
                         Cliente oTabla = db.Cliente.Find(id);
                         db.Cliente.Remove(oTabla);
+                        
+                        //LOG START
+                        Logs oTabla2 = new Logs();
+                        oTabla2.Usuario = Properties.Settings.Default.UserName.ToString();
+                        oTabla2.Descripcion = "Eliminar Cliente " + oTabla.Nombre;
+                        oTabla2.Elemento = "Cliente";
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla2.Fecha = date.AsEnumerable().First();
+                        db.Logs.Add(oTabla2);
+                        //LOG END
+
                         db.SaveChanges();
                     }
                 }
