@@ -30,5 +30,6 @@ namespace SSSM.Models
         public virtual DbSet<TipoTrabajo> TipoTrabajo { get; set; }
         public virtual DbSet<Trabajo> Trabajo { get; set; }
         public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<Logs> Logs { get; set; }
     }
 }

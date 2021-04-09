@@ -10,6 +10,7 @@
         <EntityTypeShape EntityType="SSSMModel.TipoTrabajo" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SSSMModel.Trabajo" Width="1.5" PointX="8.375" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SSSMModel.Usuario" Width="1.5" PointX="6.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SSSMModel.Logs" Width="1.5" PointX="10.125" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

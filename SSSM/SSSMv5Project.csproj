@@ -113,6 +113,9 @@
     <Compile Include="Models\Encargo.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Logs.cs">
+      <DependentUpon>DB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\TipoTrabajo.cs">
       <DependentUpon>DB.tt</DependentUpon>
     </Compile>
