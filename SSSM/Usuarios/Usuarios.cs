@@ -96,6 +96,7 @@ namespace SSSM
         {
             AgregarEmpleado ae = new AgregarEmpleado();
             ae.ShowDialog();
+            refrescar();
         }
 
         private void editarbtn_Click(object sender, EventArgs e)

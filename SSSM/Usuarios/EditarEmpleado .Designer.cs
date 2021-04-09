@@ -30,17 +30,17 @@
         {
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pass = new System.Windows.Forms.TextBox();
+            this.user = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radP = new System.Windows.Forms.RadioButton();
-            this.radC = new System.Windows.Forms.RadioButton();
+            this.radUser = new System.Windows.Forms.RadioButton();
+            this.radAdmin = new System.Windows.Forms.RadioButton();
             this.nombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.estadoCmb = new MetroFramework.Controls.MetroComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -51,10 +51,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(662, 345);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Location = new System.Drawing.Point(496, 280);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(190, 64);
+            this.button4.Size = new System.Drawing.Size(142, 52);
             this.button4.TabIndex = 7;
             this.button4.Text = "Eliminar";
             this.button4.UseVisualStyleBackColor = false;
@@ -66,92 +65,84 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(94, 345);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(70, 280);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(247, 64);
+            this.button1.Size = new System.Drawing.Size(185, 52);
             this.button1.TabIndex = 8;
             this.button1.Text = "Cancelar";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox2
+            // pass
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox2.Location = new System.Drawing.Point(187, 254);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.MaxLength = 100;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(305, 39);
-            this.textBox2.TabIndex = 33;
+            this.pass.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.pass.Location = new System.Drawing.Point(140, 206);
+            this.pass.MaxLength = 100;
+            this.pass.Name = "pass";
+            this.pass.Size = new System.Drawing.Size(230, 33);
+            this.pass.TabIndex = 33;
             // 
-            // textBox1
+            // user
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(187, 180);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(305, 39);
-            this.textBox1.TabIndex = 32;
+            this.user.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.user.Location = new System.Drawing.Point(140, 146);
+            this.user.MaxLength = 100;
+            this.user.Name = "user";
+            this.user.Size = new System.Drawing.Size(230, 33);
+            this.user.TabIndex = 32;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.radP);
-            this.groupBox1.Controls.Add(this.radC);
-            this.groupBox1.Location = new System.Drawing.Point(547, 106);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Controls.Add(this.radUser);
+            this.groupBox1.Controls.Add(this.radAdmin);
+            this.groupBox1.Location = new System.Drawing.Point(410, 86);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(307, 127);
+            this.groupBox1.Size = new System.Drawing.Size(230, 103);
             this.groupBox1.TabIndex = 31;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "TIPO DE USUARIO";
             // 
-            // radP
+            // radUser
             // 
-            this.radP.AutoSize = true;
-            this.radP.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radP.Location = new System.Drawing.Point(10, 31);
-            this.radP.Margin = new System.Windows.Forms.Padding(4);
-            this.radP.Name = "radP";
-            this.radP.Size = new System.Drawing.Size(133, 36);
-            this.radP.TabIndex = 18;
-            this.radP.TabStop = true;
-            this.radP.Text = "USUARIO";
-            this.radP.UseVisualStyleBackColor = true;
+            this.radUser.AutoSize = true;
+            this.radUser.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radUser.Location = new System.Drawing.Point(8, 25);
+            this.radUser.Name = "radUser";
+            this.radUser.Size = new System.Drawing.Size(108, 29);
+            this.radUser.TabIndex = 18;
+            this.radUser.TabStop = true;
+            this.radUser.Text = "USUARIO";
+            this.radUser.UseVisualStyleBackColor = true;
             // 
-            // radC
+            // radAdmin
             // 
-            this.radC.AutoSize = true;
-            this.radC.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.radC.Location = new System.Drawing.Point(8, 78);
-            this.radC.Margin = new System.Windows.Forms.Padding(4);
-            this.radC.Name = "radC";
-            this.radC.Size = new System.Drawing.Size(224, 36);
-            this.radC.TabIndex = 21;
-            this.radC.TabStop = true;
-            this.radC.Text = "ADMINISTRADOR";
-            this.radC.UseVisualStyleBackColor = true;
+            this.radAdmin.AutoSize = true;
+            this.radAdmin.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.radAdmin.Location = new System.Drawing.Point(6, 63);
+            this.radAdmin.Name = "radAdmin";
+            this.radAdmin.Size = new System.Drawing.Size(177, 29);
+            this.radAdmin.TabIndex = 21;
+            this.radAdmin.TabStop = true;
+            this.radAdmin.Text = "ADMINISTRADOR";
+            this.radAdmin.UseVisualStyleBackColor = true;
             // 
             // nombre
             // 
             this.nombre.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.nombre.Location = new System.Drawing.Point(186, 106);
-            this.nombre.Margin = new System.Windows.Forms.Padding(4);
+            this.nombre.Location = new System.Drawing.Point(140, 86);
             this.nombre.MaxLength = 100;
             this.nombre.Name = "nombre";
-            this.nombre.Size = new System.Drawing.Size(305, 39);
+            this.nombre.Size = new System.Drawing.Size(230, 33);
             this.nombre.TabIndex = 30;
+            this.nombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nombre_KeyPress);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Symbol", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 113);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(44, 92);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 32);
+            this.label5.Size = new System.Drawing.Size(93, 25);
             this.label5.TabIndex = 29;
             this.label5.Text = "NOMBRE:";
             // 
@@ -159,10 +150,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(7, 257);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(5, 209);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(170, 32);
+            this.label3.Size = new System.Drawing.Size(134, 25);
             this.label3.TabIndex = 28;
             this.label3.Text = "CONTRASEÑA:";
             // 
@@ -170,10 +160,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 187);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(45, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 32);
+            this.label1.Size = new System.Drawing.Size(94, 25);
             this.label1.TabIndex = 27;
             this.label1.Text = "USUARIO:";
             // 
@@ -181,22 +170,22 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(541, 239);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(406, 194);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(106, 32);
+            this.label2.Size = new System.Drawing.Size(84, 25);
             this.label2.TabIndex = 34;
             this.label2.Text = "ESTADO:";
             // 
-            // metroComboBox1
+            // estadoCmb
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 24;
-            this.metroComboBox1.Location = new System.Drawing.Point(547, 274);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(305, 30);
-            this.metroComboBox1.TabIndex = 35;
-            this.metroComboBox1.UseSelectable = true;
+            this.estadoCmb.FormattingEnabled = true;
+            this.estadoCmb.ItemHeight = 23;
+            this.estadoCmb.Location = new System.Drawing.Point(410, 223);
+            this.estadoCmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estadoCmb.Name = "estadoCmb";
+            this.estadoCmb.Size = new System.Drawing.Size(230, 29);
+            this.estadoCmb.TabIndex = 35;
+            this.estadoCmb.UseSelectable = true;
             // 
             // button2
             // 
@@ -204,25 +193,24 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(349, 345);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(262, 280);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(247, 64);
+            this.button2.Size = new System.Drawing.Size(185, 52);
             this.button2.TabIndex = 36;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = false;
             // 
             // EditarEmpleado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 427);
+            this.ClientSize = new System.Drawing.Size(659, 347);
             this.ControlBox = false;
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.estadoCmb);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.pass);
+            this.Controls.Add(this.user);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.label5);
@@ -230,9 +218,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button4);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "EditarEmpleado";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Editar Empleado";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -246,17 +232,17 @@
         #endregion
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox pass;
+        private System.Windows.Forms.TextBox user;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radP;
-        private System.Windows.Forms.RadioButton radC;
+        private System.Windows.Forms.RadioButton radUser;
+        private System.Windows.Forms.RadioButton radAdmin;
         private System.Windows.Forms.TextBox nombre;
         public System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox estadoCmb;
         private System.Windows.Forms.Button button2;
     }
 }

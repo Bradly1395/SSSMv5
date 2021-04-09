@@ -40,5 +40,11 @@ namespace SSSM
         {
 
         }
+
+        private void nombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloLetras(e);
+        }
     }
 }
