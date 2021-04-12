@@ -47,13 +47,13 @@
             this.agregartipobtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.agregartipobtn.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
             this.agregartipobtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.agregartipobtn.Location = new System.Drawing.Point(511, 108);
-            this.agregartipobtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.agregartipobtn.Location = new System.Drawing.Point(383, 88);
             this.agregartipobtn.Name = "agregartipobtn";
-            this.agregartipobtn.Size = new System.Drawing.Size(212, 75);
+            this.agregartipobtn.Size = new System.Drawing.Size(159, 61);
             this.agregartipobtn.TabIndex = 20;
             this.agregartipobtn.Text = "NUEVO TIPO DE TRABAJO";
             this.agregartipobtn.UseVisualStyleBackColor = false;
+            this.agregartipobtn.Click += new System.EventHandler(this.agregartipobtn_Click);
             // 
             // editarbtn
             // 
@@ -61,10 +61,9 @@
             this.editarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.editarbtn.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
             this.editarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.editarbtn.Location = new System.Drawing.Point(277, 108);
-            this.editarbtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.editarbtn.Location = new System.Drawing.Point(208, 88);
             this.editarbtn.Name = "editarbtn";
-            this.editarbtn.Size = new System.Drawing.Size(212, 75);
+            this.editarbtn.Size = new System.Drawing.Size(159, 61);
             this.editarbtn.TabIndex = 21;
             this.editarbtn.Text = "EDITAR";
             this.editarbtn.UseVisualStyleBackColor = false;
@@ -72,10 +71,10 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(19, 22);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.pictureBox2.Location = new System.Drawing.Point(14, 18);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 146);
+            this.pictureBox2.Size = new System.Drawing.Size(117, 119);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 158;
             this.pictureBox2.TabStop = false;
@@ -87,10 +86,9 @@
             this.button6.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(664, 22);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Location = new System.Drawing.Point(498, 18);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(59, 50);
+            this.button6.Size = new System.Drawing.Size(44, 41);
             this.button6.TabIndex = 159;
             this.button6.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button6.UseVisualStyleBackColor = true;
@@ -119,8 +117,8 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Gray;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridUsuarios.DefaultCellStyle = dataGridViewCellStyle1;
-            this.gridUsuarios.Location = new System.Drawing.Point(20, 192);
-            this.gridUsuarios.Margin = new System.Windows.Forms.Padding(5);
+            this.gridUsuarios.Location = new System.Drawing.Point(15, 156);
+            this.gridUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridUsuarios.MultiSelect = false;
             this.gridUsuarios.Name = "gridUsuarios";
             this.gridUsuarios.ReadOnly = true;
@@ -128,7 +126,7 @@
             this.gridUsuarios.RowHeadersVisible = false;
             this.gridUsuarios.RowHeadersWidth = 51;
             this.gridUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUsuarios.Size = new System.Drawing.Size(703, 386);
+            this.gridUsuarios.Size = new System.Drawing.Size(527, 314);
             this.gridUsuarios.TabIndex = 161;
             // 
             // EDITAR
@@ -151,18 +149,16 @@
             // 
             // Parametros
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(750, 597);
+            this.ClientSize = new System.Drawing.Size(562, 485);
             this.ControlBox = false;
             this.Controls.Add(this.gridUsuarios);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.editarbtn);
             this.Controls.Add(this.agregartipobtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Parametros";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "PARAMETROS";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
             this.Load += new System.EventHandler(this.Form2_Load);

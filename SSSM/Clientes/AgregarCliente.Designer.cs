@@ -110,8 +110,9 @@
             // 
             this.identidad.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.identidad.Location = new System.Drawing.Point(207, 136);
-            this.identidad.MaxLength = 100;
+            this.identidad.MaxLength = 13;
             this.identidad.Name = "identidad";
+            this.identidad.ShortcutsEnabled = false;
             this.identidad.Size = new System.Drawing.Size(230, 33);
             this.identidad.TabIndex = 25;
             this.identidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.identidad_KeyPress);
@@ -120,8 +121,9 @@
             // 
             this.telefono.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.telefono.Location = new System.Drawing.Point(207, 194);
-            this.telefono.MaxLength = 100;
+            this.telefono.MaxLength = 8;
             this.telefono.Name = "telefono";
+            this.telefono.ShortcutsEnabled = false;
             this.telefono.Size = new System.Drawing.Size(230, 33);
             this.telefono.TabIndex = 26;
             this.telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefono_KeyPress);

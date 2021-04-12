@@ -82,5 +82,12 @@ namespace SSSM
         {
             this.Close();
         }
+
+        private void agregartipobtn_Click(object sender, EventArgs e)
+        {
+            AgregarTipoTrabajo at = new AgregarTipoTrabajo();
+            at.ShowDialog();
+            refrescar();
+        }
     }
 }

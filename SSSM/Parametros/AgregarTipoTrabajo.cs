@@ -38,5 +38,11 @@ namespace SSSM
         {
 
         }
+
+        private void costo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones numero = new Validaciones();
+            numero.SoloNumeros(e);
+        }
     }
 }

@@ -25,6 +25,20 @@ namespace SSSM
             refrescar();
         }
 
+        private int? GetId()
+        {
+            try
+            {
+                return int.Parse(gridUsuarios.Rows[gridUsuarios.CurrentRow.Index].Cells[2].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
+        }
+
         private void refrescar()
         {
             using (SSSMEntities db = new SSSMEntities())

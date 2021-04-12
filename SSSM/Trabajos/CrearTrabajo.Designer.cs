@@ -140,6 +140,7 @@
             this.valor.Location = new System.Drawing.Point(228, 297);
             this.valor.MaxLength = 9;
             this.valor.Name = "valor";
+            this.valor.ShortcutsEnabled = false;
             this.valor.Size = new System.Drawing.Size(257, 33);
             this.valor.TabIndex = 14;
             this.valor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.valor_KeyPress);

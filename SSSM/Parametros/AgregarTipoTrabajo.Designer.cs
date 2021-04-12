@@ -33,7 +33,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.nombre = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.costo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -94,14 +94,16 @@
             this.nombre.Size = new System.Drawing.Size(230, 33);
             this.nombre.TabIndex = 14;
             // 
-            // textBox1
+            // costo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.textBox1.Location = new System.Drawing.Point(109, 153);
-            this.textBox1.MaxLength = 100;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(145, 33);
-            this.textBox1.TabIndex = 25;
+            this.costo.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.costo.Location = new System.Drawing.Point(109, 153);
+            this.costo.MaxLength = 10;
+            this.costo.Name = "costo";
+            this.costo.ShortcutsEnabled = false;
+            this.costo.Size = new System.Drawing.Size(145, 33);
+            this.costo.TabIndex = 25;
+            this.costo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.costo_KeyPress);
             // 
             // AgregarTipoTrabajo
             // 
@@ -109,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 321);
             this.ControlBox = false;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.costo);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
@@ -130,6 +132,6 @@
         private System.Windows.Forms.Button button1;
         public System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox nombre;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox costo;
     }
 }

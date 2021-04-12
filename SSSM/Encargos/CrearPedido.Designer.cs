@@ -195,6 +195,7 @@
             this.telefono.Location = new System.Drawing.Point(234, 179);
             this.telefono.MaxLength = 100;
             this.telefono.Name = "telefono";
+            this.telefono.ShortcutsEnabled = false;
             this.telefono.Size = new System.Drawing.Size(257, 33);
             this.telefono.TabIndex = 63;
             this.telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.telefono_KeyPress);
@@ -216,6 +217,7 @@
             this.abono.Location = new System.Drawing.Point(234, 282);
             this.abono.MaxLength = 6;
             this.abono.Name = "abono";
+            this.abono.ShortcutsEnabled = false;
             this.abono.Size = new System.Drawing.Size(150, 33);
             this.abono.TabIndex = 64;
             this.abono.TextChanged += new System.EventHandler(this.abono_TextChanged);
@@ -247,6 +249,7 @@
             this.costo.Location = new System.Drawing.Point(234, 232);
             this.costo.MaxLength = 6;
             this.costo.Name = "costo";
+            this.costo.ShortcutsEnabled = false;
             this.costo.Size = new System.Drawing.Size(150, 33);
             this.costo.TabIndex = 68;
             this.costo.TextChanged += new System.EventHandler(this.costo_TextChanged);
