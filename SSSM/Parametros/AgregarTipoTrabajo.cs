@@ -52,26 +52,31 @@ namespace SSSM
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using (SSSMEntities db = new SSSMEntities())
+            if (string.IsNullOrWhiteSpace(nombre.Text) == false && string.IsNullOrWhiteSpace(costo.Text) == false)
             {
-                if (id == null)
-                    oTabla = new TipoTrabajo();
-
-                oTabla.Descripcion1 = nombre.Text;
-                oTabla.Precio = Convert.ToDouble(costo.Text);
-
-
-                if (id == null)
-                    db.TipoTrabajo.Add(oTabla);
-                else
+                using (SSSMEntities db = new SSSMEntities())
                 {
-                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    if (id == null)
+                        oTabla = new TipoTrabajo();
+
+                    oTabla.Descripcion1 = nombre.Text;
+                    oTabla.Precio = Convert.ToDouble(costo.Text);
+
+
+                    if (id == null)
+                        db.TipoTrabajo.Add(oTabla);
+                    else
+                    {
+                        db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    db.SaveChanges();
+
+                    this.Close();
+
                 }
-                db.SaveChanges();
-
-                this.Close();
-
             }
+            else
+                MessageBox.Show("No se permiten espacios en blanco");
         }
 
         private void costo_KeyPress(object sender, KeyPressEventArgs e)

@@ -86,43 +86,52 @@ namespace SSSM
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using (SSSMEntities db = new SSSMEntities())
+            if (string.IsNullOrWhiteSpace(descripcion.Text) == false && string.IsNullOrWhiteSpace(valor.Text) == false)
             {
-                if (id == null)
-                    oTabla = new Trabajo();
-
-                //REFACTOR THIS---
-                var lst = from a in db.Cliente
-                          where a.Nombre == clientecmb.Text
-                          select a;
-                Cliente tabla = lst.FirstOrDefault<Cliente>();
-                if (tabla != null) 
-                    idCliente = tabla.IDCliente;
-                //END---
-
-                oTabla.Descripcion = descripcion.Text;
-                oTabla.Valor = Convert.ToInt32(valor.Text);
-                oTabla.TipoTrabajo = idAtencion;
-                oTabla.Usuario = Properties.Settings.Default.UserID;
-                oTabla.Estado = "Activo";
-                oTabla.Cliente = idCliente;
-
-                if (id == null)
+                using (SSSMEntities db = new SSSMEntities())
                 {
-                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
-                    oTabla.FechaEntrada = date.AsEnumerable().First();
-                    db.Trabajo.Add(oTabla);
-                }  
-                else
-                {
-                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
-                    oTabla.FechaSalida = date.AsEnumerable().First();
-                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    if (id == null)
+                        oTabla = new Trabajo();
+
+                    //REFACTOR THIS---
+                    var lst = from a in db.Cliente
+                              where a.Nombre == clientecmb.Text
+                              select a;
+                    Cliente tabla = lst.FirstOrDefault<Cliente>();
+                    if (tabla != null)
+                        idCliente = tabla.IDCliente;
+                    //END---
+
+                    oTabla.Descripcion = descripcion.Text;
+                    oTabla.Valor = Convert.ToInt32(valor.Text);
+                    oTabla.TipoTrabajo = idAtencion;
+                    oTabla.Usuario = Properties.Settings.Default.UserID;
+                    oTabla.Estado = "Activo";
+                    oTabla.Cliente = idCliente;
+
+                    if (id == null)
+                    {
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla.FechaEntrada = date.AsEnumerable().First();
+                        db.Trabajo.Add(oTabla);
+                    }
+                    else
+                    {
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla.FechaSalida = date.AsEnumerable().First();
+                        db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    db.SaveChanges();
+
+                    this.Close();
                 }
-                db.SaveChanges();
-
-                this.Close();
             }
+            else
+            {
+                MessageBox.Show("No se permiten espacios en blanco");
+            }
+
+
         }
 
         private void atencionCmb_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,37 +159,41 @@ namespace SSSM
 
         private void finalizarBtn_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Desea finalizar el trabajo? ", "Advertencia", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (string.IsNullOrWhiteSpace(descripcion.Text) == false && string.IsNullOrWhiteSpace(valor.Text) == false)
             {
-                using (SSSMEntities db = new SSSMEntities())
+                DialogResult dialogResult = MessageBox.Show("Desea finalizar el trabajo? ", "Advertencia", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    //REFACTOR THIS---
-                    var lst = from a in db.Cliente
-                              where a.Nombre == clientecmb.Text
-                              select a;
-                    Cliente tabla = lst.FirstOrDefault<Cliente>();
-                    if (tabla != null)
-                        idCliente = tabla.IDCliente;
-                    //END---
+                    using (SSSMEntities db = new SSSMEntities())
+                    {
+                        //REFACTOR THIS---
+                        var lst = from a in db.Cliente
+                                  where a.Nombre == clientecmb.Text
+                                  select a;
+                        Cliente tabla = lst.FirstOrDefault<Cliente>();
+                        if (tabla != null)
+                            idCliente = tabla.IDCliente;
+                        //END---
 
-                    oTabla.Descripcion = descripcion.Text;
-                    oTabla.Valor = Convert.ToInt32(valor.Text);
-                    oTabla.TipoTrabajo = idAtencion;
-                    oTabla.Usuario = Properties.Settings.Default.UserID;
-                    oTabla.Cliente = idCliente;
+                        oTabla.Descripcion = descripcion.Text;
+                        oTabla.Valor = Convert.ToInt32(valor.Text);
+                        oTabla.TipoTrabajo = idAtencion;
+                        oTabla.Usuario = Properties.Settings.Default.UserID;
+                        oTabla.Cliente = idCliente;
 
-                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
-                    oTabla.Estado = "Entregado";
-                    oTabla.FechaSalida = date.AsEnumerable().First();
-                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla.Estado = "Entregado";
+                        oTabla.FechaSalida = date.AsEnumerable().First();
+                        db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
 
-                    db.SaveChanges();
+                        db.SaveChanges();
 
-                    this.Close();
+                        this.Close();
+                    }
                 }
             }
-            
+            else
+                MessageBox.Show("No se permiten espacios en blanco");
         }
 
         private void button2_Click(object sender, EventArgs e)

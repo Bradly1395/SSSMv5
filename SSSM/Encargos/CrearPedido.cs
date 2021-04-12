@@ -70,37 +70,42 @@ namespace SSSM
 
         private void button4_Click(object sender, EventArgs e)//GUARDAR
         {
-            using (SSSMEntities db = new SSSMEntities())
+            if (string.IsNullOrWhiteSpace(cliente.Text) == false && string.IsNullOrWhiteSpace(telefono.Text) == false && string.IsNullOrWhiteSpace(costo.Text) == false && string.IsNullOrWhiteSpace(abono.Text) == false && string.IsNullOrWhiteSpace(descripcion.Text) == false)
             {
-                if (id == null)
-                    oTabla = new Encargo();
-
-                //INSERT START
-                oTabla.Observacion = descripcion.Text;
-                oTabla.Valor = Convert.ToInt32(costo.Text);
-                oTabla.Abono = Convert.ToInt32(abono.Text);
-                oTabla.TipoTrabajo = idAtencion;
-                oTabla.Encargado = Properties.Settings.Default.UserID;
-                oTabla.Estado = "Activo";
-                oTabla.NombreCliente = cliente.Text;
-                oTabla.NumeroDeTelefono = telefono.Text;
-                //INSERT END
-                if (id == null)
+                using (SSSMEntities db = new SSSMEntities())
                 {
-                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
-                    oTabla.FechaEntrada = date.AsEnumerable().First();
-                    db.Encargo.Add(oTabla);
-                }
-                else
-                {
-                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
-                    oTabla.FechaSalida = date.AsEnumerable().First();
-                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
-                }
-                db.SaveChanges();
+                    if (id == null)
+                        oTabla = new Encargo();
 
-                this.Close();
+                    //INSERT START
+                    oTabla.Observacion = descripcion.Text;
+                    oTabla.Valor = Convert.ToInt32(costo.Text);
+                    oTabla.Abono = Convert.ToInt32(abono.Text);
+                    oTabla.TipoTrabajo = idAtencion;
+                    oTabla.Encargado = Properties.Settings.Default.UserID;
+                    oTabla.Estado = "Activo";
+                    oTabla.NombreCliente = cliente.Text;
+                    oTabla.NumeroDeTelefono = telefono.Text;
+                    //INSERT END
+                    if (id == null)
+                    {
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla.FechaEntrada = date.AsEnumerable().First();
+                        db.Encargo.Add(oTabla);
+                    }
+                    else
+                    {
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla.FechaSalida = date.AsEnumerable().First();
+                        db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    db.SaveChanges();
+
+                    this.Close();
+                }
             }
+            else
+                MessageBox.Show("No se permiten espacios en blanco");
         }
 
         private void label7_Click(object sender, EventArgs e)
@@ -134,31 +139,36 @@ namespace SSSM
 
         private void finalizarBtn_Click(object sender, EventArgs e)//FINALIZAR
         {
-            DialogResult dialogResult = MessageBox.Show("Desea finalizar el trabajo? ", "Advertencia", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
+            if (string.IsNullOrWhiteSpace(cliente.Text) == false && string.IsNullOrWhiteSpace(telefono.Text) == false && string.IsNullOrWhiteSpace(costo.Text) == false && string.IsNullOrWhiteSpace(abono.Text) == false && string.IsNullOrWhiteSpace(descripcion.Text) == false)
             {
-                using (SSSMEntities db = new SSSMEntities())
+                DialogResult dialogResult = MessageBox.Show("Desea finalizar el trabajo? ", "Advertencia", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    //INSERT START
-                    oTabla.Observacion = descripcion.Text;
-                    oTabla.Valor = Convert.ToInt32(costo.Text);
-                    oTabla.Abono = Convert.ToInt32(abono.Text);
-                    oTabla.TipoTrabajo = idAtencion;
-                    oTabla.Encargado = Properties.Settings.Default.UserID;
-                    oTabla.Estado = "Entregado";
-                    oTabla.NombreCliente = cliente.Text;
-                    oTabla.NumeroDeTelefono = telefono.Text;
-                    //INSERT END
+                    using (SSSMEntities db = new SSSMEntities())
+                    {
+                        //INSERT START
+                        oTabla.Observacion = descripcion.Text;
+                        oTabla.Valor = Convert.ToInt32(costo.Text);
+                        oTabla.Abono = Convert.ToInt32(abono.Text);
+                        oTabla.TipoTrabajo = idAtencion;
+                        oTabla.Encargado = Properties.Settings.Default.UserID;
+                        oTabla.Estado = "Entregado";
+                        oTabla.NombreCliente = cliente.Text;
+                        oTabla.NumeroDeTelefono = telefono.Text;
+                        //INSERT END
 
-                    var date = db.Database.SqlQuery<DateTime>("select getDate()");
-                    oTabla.FechaSalida = date.AsEnumerable().First();
-                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla.FechaSalida = date.AsEnumerable().First();
+                        db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
 
-                    db.SaveChanges();
+                        db.SaveChanges();
 
-                    this.Close();
+                        this.Close();
+                    }
                 }
             }
+            else
+                MessageBox.Show("No se permiten espacios en blanco");         
         }
 
         private void atencionCmb_SelectedIndexChanged(object sender, EventArgs e)

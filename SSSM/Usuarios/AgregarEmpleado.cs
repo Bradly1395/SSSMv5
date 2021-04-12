@@ -38,30 +38,34 @@ namespace SSSM
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string tipo;
-            if (radUser.Checked)
-                tipo = "Usuario";
-            else
-                tipo = "Administrador";
-
-            string passEncrypt = Mantenimiento.Encrypt(pass.Text);
-
-            using (SSSMEntities db = new SSSMEntities())
+            if (string.IsNullOrWhiteSpace(nombre.Text) == false && string.IsNullOrWhiteSpace(usuario.Text) == false && string.IsNullOrWhiteSpace(pass.Text) == false)
             {
-                Usuario oTabla = new Usuario();
+                string tipo;
+                if (radUser.Checked)
+                    tipo = "Usuario";
+                else
+                    tipo = "Administrador";
 
-                oTabla.Nombre = nombre.Text;
-                oTabla.Clave = passEncrypt;
-                oTabla.Usuario1 = usuario.Text;
-                oTabla.TipoUsuario = tipo;
-                oTabla.Estado = "CambiarClave";
+                string passEncrypt = Mantenimiento.Encrypt(pass.Text);
 
-                db.Usuario.Add(oTabla);
-                db.SaveChanges();
+                using (SSSMEntities db = new SSSMEntities())
+                {
+                    Usuario oTabla = new Usuario();
 
-                this.Close();
+                    oTabla.Nombre = nombre.Text;
+                    oTabla.Clave = passEncrypt;
+                    oTabla.Usuario1 = usuario.Text;
+                    oTabla.TipoUsuario = tipo;
+                    oTabla.Estado = "CambiarClave";
+
+                    db.Usuario.Add(oTabla);
+                    db.SaveChanges();
+
+                    this.Close();
+                }
             }
-
+            else
+                MessageBox.Show("No se permiten espacios en blanco");
         }
 
         private void nombre_KeyPress(object sender, KeyPressEventArgs e)

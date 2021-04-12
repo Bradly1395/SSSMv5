@@ -55,26 +55,31 @@ namespace SSSM
 
         private void button4_Click(object sender, EventArgs e)
         {
-            using (SSSMEntities db = new SSSMEntities())
+            if (string.IsNullOrWhiteSpace(nombre.Text) == false && string.IsNullOrWhiteSpace(telefono.Text) == false)
             {
-                if (id == null)
-                    oTabla = new Cliente();
-
-                oTabla.Nombre = nombre.Text;
-                oTabla.Identidad = identidad.Text;
-                oTabla.Telefono = telefono.Text;
-
-                if (id == null)
-                    db.Cliente.Add(oTabla);
-                else
+                using (SSSMEntities db = new SSSMEntities())
                 {
-                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    if (id == null)
+                        oTabla = new Cliente();
+
+                    oTabla.Nombre = nombre.Text;
+                    oTabla.Identidad = identidad.Text;
+                    oTabla.Telefono = telefono.Text;
+
+                    if (id == null)
+                        db.Cliente.Add(oTabla);
+                    else
+                    {
+                        db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                    }
+                    db.SaveChanges();
+
+                    this.Close();
                 }
-                db.SaveChanges();
-
-                this.Close();
-
             }
+            else
+                MessageBox.Show("No se permiten espacios en blanco");
+            
         }
 
         private void identidad_KeyPress(object sender, KeyPressEventArgs e)
