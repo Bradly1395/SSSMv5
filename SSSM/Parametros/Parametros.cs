@@ -20,6 +20,20 @@ namespace SSSM
             
         }
 
+        private int? GetId()
+        {
+            try
+            {
+                return int.Parse(gridUsuarios.Rows[gridUsuarios.CurrentRow.Index].Cells[2].Value.ToString());
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
+        }
+
         private void Form2_Load(object sender, EventArgs e)
         {
             refrescar();
@@ -87,6 +101,46 @@ namespace SSSM
         {
             AgregarTipoTrabajo at = new AgregarTipoTrabajo();
             at.ShowDialog();
+            refrescar();
+        }
+
+        private void gridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == gridUsuarios.Columns[0].Index)//EDITAR
+            {
+                int? id = GetId();
+                if (id != null)
+                {
+                    AgregarTipoTrabajo oFrmTabla = new AgregarTipoTrabajo(id);
+                    oFrmTabla.ShowDialog();
+                    refrescar();
+                }
+            }
+            if (e.ColumnIndex == gridUsuarios.Columns[1].Index)//ELIMINAR
+            {
+                int? id = GetId();
+                DialogResult dialogResult = MessageBox.Show("Desea borrar " + id.ToString(), "Advertencia", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SSSMEntities db = new SSSMEntities())
+                    {
+                        TipoTrabajo oTabla = db.TipoTrabajo.Find(id);
+                        db.TipoTrabajo.Remove(oTabla);
+
+                        //LOG START
+                        Logs oTabla2 = new Logs();
+                        oTabla2.Usuario = Properties.Settings.Default.UserName.ToString();
+                        oTabla2.Descripcion = "Eliminar TipoTrabajo " + oTabla.Descripcion1;
+                        oTabla2.Elemento = "TipoTrabajo";
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla2.Fecha = date.AsEnumerable().First();
+                        db.Logs.Add(oTabla2);
+                        //LOG END
+
+                        db.SaveChanges();
+                    }
+                }
+            }
             refrescar();
         }
     }

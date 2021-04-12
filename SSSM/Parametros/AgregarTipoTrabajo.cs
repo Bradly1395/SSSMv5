@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SSSM.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,26 @@ namespace SSSM
 {
     public partial class AgregarTipoTrabajo : MetroFramework.Forms.MetroForm
     {
-        
-        public AgregarTipoTrabajo()
+        public int? id;
+        TipoTrabajo oTabla = null;
+        public AgregarTipoTrabajo(int? id = null)
         {
             InitializeComponent();
-            
+            this.id = id;
+            if (id != null)
+            {
+                cargaDatos();
+            }
+        }
+
+        private void cargaDatos()
+        {
+            using (SSSMEntities db = new SSSMEntities())
+            {
+                oTabla = db.TipoTrabajo.Find(id);
+                nombre.Text = oTabla.Descripcion1;
+                costo.Text = oTabla.Precio.ToString();
+            }
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -36,7 +52,26 @@ namespace SSSM
 
         private void button4_Click(object sender, EventArgs e)
         {
+            using (SSSMEntities db = new SSSMEntities())
+            {
+                if (id == null)
+                    oTabla = new TipoTrabajo();
 
+                oTabla.Descripcion1 = nombre.Text;
+                oTabla.Precio = Convert.ToDouble(costo.Text);
+
+
+                if (id == null)
+                    db.TipoTrabajo.Add(oTabla);
+                else
+                {
+                    db.Entry(oTabla).State = System.Data.Entity.EntityState.Modified;
+                }
+                db.SaveChanges();
+
+                this.Close();
+
+            }
         }
 
         private void costo_KeyPress(object sender, KeyPressEventArgs e)
