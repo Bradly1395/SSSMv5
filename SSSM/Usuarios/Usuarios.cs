@@ -118,5 +118,45 @@ namespace SSSM
             EditarEmpleado ee = new EditarEmpleado();
             ee.ShowDialog();
         }
+
+        private void gridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == gridUsuarios.Columns[0].Index)//EDITAR
+            {
+                int? id = GetId();
+                if (id != null)
+                {
+                    EditarEmpleado oFrmTabla = new EditarEmpleado(id);
+                    oFrmTabla.ShowDialog();
+                    refrescar();
+                }
+            }
+            if (e.ColumnIndex == gridUsuarios.Columns[1].Index)//ELIMINAR
+            {
+                int? id = GetId();
+                DialogResult dialogResult = MessageBox.Show("Desea borrar " + id.ToString(), "Advertencia", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    using (SSSMEntities db = new SSSMEntities())
+                    {
+                        Usuario oTabla = db.Usuario.Find(id);
+                        db.Usuario.Remove(oTabla);
+
+                        //LOG START
+                        Logs oTabla2 = new Logs();
+                        oTabla2.Usuario = Properties.Settings.Default.UserName.ToString();
+                        oTabla2.Descripcion = "Eliminar Empleado " + oTabla.Nombre;
+                        oTabla2.Elemento = "Empleado";
+                        var date = db.Database.SqlQuery<DateTime>("select getDate()");
+                        oTabla2.Fecha = date.AsEnumerable().First();
+                        db.Logs.Add(oTabla2);
+                        //LOG END
+
+                        db.SaveChanges();
+                    }
+                }
+            }
+            refrescar();
+        }
     }
 }

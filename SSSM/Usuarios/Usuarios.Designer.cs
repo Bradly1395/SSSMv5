@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuarios));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.agregaruserbtn = new System.Windows.Forms.Button();
-            this.editarbtn = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button6 = new System.Windows.Forms.Button();
             this.gridUsuarios = new System.Windows.Forms.DataGridView();
@@ -55,25 +54,11 @@
             this.agregaruserbtn.UseVisualStyleBackColor = false;
             this.agregaruserbtn.Click += new System.EventHandler(this.agregaruserbtn_Click);
             // 
-            // editarbtn
-            // 
-            this.editarbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.editarbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.editarbtn.Font = new System.Drawing.Font("Bahnschrift Light", 14.25F);
-            this.editarbtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.editarbtn.Location = new System.Drawing.Point(354, 91);
-            this.editarbtn.Name = "editarbtn";
-            this.editarbtn.Size = new System.Drawing.Size(159, 58);
-            this.editarbtn.TabIndex = 21;
-            this.editarbtn.Text = "EDITAR";
-            this.editarbtn.UseVisualStyleBackColor = false;
-            this.editarbtn.Click += new System.EventHandler(this.editarbtn_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(14, 18);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(117, 119);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -119,7 +104,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridUsuarios.DefaultCellStyle = dataGridViewCellStyle2;
             this.gridUsuarios.Location = new System.Drawing.Point(14, 164);
-            this.gridUsuarios.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridUsuarios.Margin = new System.Windows.Forms.Padding(4);
             this.gridUsuarios.MultiSelect = false;
             this.gridUsuarios.Name = "gridUsuarios";
             this.gridUsuarios.ReadOnly = true;
@@ -127,8 +112,9 @@
             this.gridUsuarios.RowHeadersVisible = false;
             this.gridUsuarios.RowHeadersWidth = 51;
             this.gridUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gridUsuarios.Size = new System.Drawing.Size(760, 314);
+            this.gridUsuarios.Size = new System.Drawing.Size(664, 314);
             this.gridUsuarios.TabIndex = 160;
+            this.gridUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridUsuarios_CellContentClick);
             // 
             // EDITAR
             // 
@@ -157,7 +143,6 @@
             this.Controls.Add(this.gridUsuarios);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.editarbtn);
             this.Controls.Add(this.agregaruserbtn);
             this.Name = "Usuarios";
             this.Text = "USUARIOS";
@@ -171,7 +156,6 @@
 
         #endregion
         private System.Windows.Forms.Button agregaruserbtn;
-        private System.Windows.Forms.Button editarbtn;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView gridUsuarios;

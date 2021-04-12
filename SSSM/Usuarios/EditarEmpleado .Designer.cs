@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.pass = new System.Windows.Forms.TextBox();
             this.user = new System.Windows.Forms.TextBox();
@@ -44,20 +43,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(30)))), ((int)(((byte)(99)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(496, 280);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(142, 52);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Eliminar";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 
@@ -84,6 +69,7 @@
             // 
             // user
             // 
+            this.user.Enabled = false;
             this.user.Font = new System.Drawing.Font("Segoe UI", 14.25F);
             this.user.Location = new System.Drawing.Point(140, 146);
             this.user.MaxLength = 100;
@@ -181,7 +167,7 @@
             this.estadoCmb.FormattingEnabled = true;
             this.estadoCmb.ItemHeight = 23;
             this.estadoCmb.Location = new System.Drawing.Point(410, 223);
-            this.estadoCmb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.estadoCmb.Margin = new System.Windows.Forms.Padding(2);
             this.estadoCmb.Name = "estadoCmb";
             this.estadoCmb.Size = new System.Drawing.Size(230, 29);
             this.estadoCmb.TabIndex = 35;
@@ -199,6 +185,7 @@
             this.button2.TabIndex = 36;
             this.button2.Text = "Guardar";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EditarEmpleado
             // 
@@ -217,7 +204,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button4);
             this.Name = "EditarEmpleado";
             this.Text = "Editar Empleado";
             this.TextAlign = MetroFramework.Forms.MetroFormTextAlign.Center;
@@ -230,7 +216,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox pass;
         private System.Windows.Forms.TextBox user;
